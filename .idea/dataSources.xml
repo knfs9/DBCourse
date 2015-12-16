@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3045112165">
+    <data-source source="LOCAL" name="SQLite - [2]" uuid="e9bb5468-cfe0-412a-9df8-06940fe4756a">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/NewDB.db3</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="TrainDB" uuid="d3c12c28-a9e1-4ab2-bce0-b6e8fb39fbe0">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$USER_HOME$/Desktop/db.db3</jdbc-url>
+    </data-source>
+  </component>
+</project>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="SQLite - [2]" uuid="e9bb5468-cfe0-412a-9df8-06940fe4756a">
+    <database-info product="SQLite" version="3.8.9" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
+    <schema name="" catalog=""/>
+    <table name="cashbox" schema="" catalog="" type="TABLE">
+      <column name="ID" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="StationID" sqlType="INT" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="EmployeeID" sqlType="INT" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="employee" schema="" catalog="" type="TABLE">
+      <column name="ID" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="FullName" sqlType="TEXT" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="Post" sqlType="TEXT" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="Salary" sqlType="REAL" precision="2000000000" scale="10" nullable="true" jdbcType="6"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="employee-cashbox" schema="" catalog="" type="TABLE">
+      <column name="CashboxID" sqlType="INT" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="EmployeeID" sqlType="INT" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <primary-key columns="`cashboxid`,`employeeid`"/>
+    </table>
+    <table name="employee-train" schema="" catalog="" type="TABLE">
+      <column name="TrainID" sqlType="INT" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="EmployeeID" sqlType="INT" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <primary-key columns="`trainid`,`employeeid`"/>
+    </table>
+    <table name="sqlite_sequence" schema="" catalog="" type="TABLE">
+      <column name="name" sqlType="" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="seq" sqlType="" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="station" schema="" catalog="" type="TABLE">
+      <column name="ID" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="StationName" sqlType="TEXT" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="ticket" schema="" catalog="" type="TABLE">
+      <column name="ID" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="Direction" sqlType="TEXT" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="TrainID" sqlType="INT" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="DispatchDate" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="Cost" sqlType="REAL" precision="2000000000" scale="10" nullable="true" jdbcType="6"/>
+      <column name="SeatNumber" sqlType="INT" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="DispatchStation" sqlType="TEXT" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="ArrivalStation" sqlType="TEXT" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="WagonID" sqlType="INT" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="CashbocID" sqlType="INT" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="tickettype" schema="" catalog="" type="TABLE">
+      <column name="ID" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="Type" sqlType="TEXT" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="TicketID" sqlType="INT" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="train" schema="" catalog="" type="TABLE">
+      <column name="ID" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="Direction" sqlType="TEXT" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="WagonNumber" sqlType="INT" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="SeatNumber" sqlType="INT" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="DispatchDate" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="ArrivalDate" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="EmployeeID" sqlType="INT" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="wagon" schema="" catalog="" type="TABLE">
+      <column name="ID" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="WagonType" sqlType="TEXT" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="Cost" sqlType="REAL" precision="2000000000" scale="10" nullable="true" jdbcType="6"/>
+      <column name="TicketID" sqlType="INT" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="TrainID" sqlType="INT" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <primary-key columns="id"/>
+    </table>
+  </data-source>
+  <data-source name="TrainDB" uuid="d3c12c28-a9e1-4ab2-bce0-b6e8fb39fbe0">
+    <database-info product="SQLite" version="3.8.9" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
+    <schema name="" catalog=""/>
+    <table name="cashbox" schema="" catalog="" type="TABLE">
+      <column name="ID" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
+      <column name="StationID" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="EmployeeID" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="StationName" sqlType="CHAR(25)" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <foreign-key name="#FAKE_cashbox_1" columns="StationID" ref-table="station" ref-schema="" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="1"/>
+      <index name="StationID" unique="true" columns="StationID"/>
+      <index name="EmployeeID" unique="true" columns="EmployeeID"/>
+    </table>
+    <table name="employee" schema="" catalog="" type="TABLE">
+      <column name="ID" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
+      <column name="FullName" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="Post" sqlType="VARCHAR(255)" precision="0" scale="-1" nullable="true" jdbcType="12" def="J05VTEwn"/>
+      <column name="Salary" sqlType="FLOAT(0,0)" precision="0" scale="-1" nullable="true" jdbcType="6" def="MA=="/>
+      <column name="EnrollmentDate" sqlType="DATETIME" precision="0" scale="-1" nullable="true" jdbcType="12" def="J05VTEwn"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="sqlite_sequence" schema="" catalog="" type="TABLE">
+      <column name="name" sqlType="" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="seq" sqlType="" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="station" schema="" catalog="" type="TABLE">
+      <column name="ID" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
+      <column name="StationName" sqlType="VARCHAR(255)" precision="0" scale="-1" nullable="true" jdbcType="12" def="J05VTEwn"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="ticket" schema="" catalog="" type="TABLE">
+      <column name="ID" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
+      <column name="Direction" sqlType="VARCHAR(255)" precision="0" scale="-1" nullable="true" jdbcType="12" def="J05VTEwn"/>
+      <column name="TrainID" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="DispatchDate" sqlType="DATETIME" precision="0" scale="-1" nullable="true" jdbcType="12" def="J05VTEwn"/>
+      <column name="Cost" sqlType="FLOAT(0,0)" precision="0" scale="-1" nullable="true" jdbcType="6" def="MA=="/>
+      <column name="SeatNumber" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="DispatchStation" sqlType="VARCHAR(255)" precision="0" scale="-1" nullable="true" jdbcType="12" def="J05VTEwn"/>
+      <column name="ArrivalStation" sqlType="VARCHAR(255)" precision="0" scale="-1" nullable="true" jdbcType="12" def="J05VTEwn"/>
+      <column name="WagonID" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="CashboxID" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4" def="MA=="/>
+      <primary-key columns="id"/>
+      <foreign-key name="#FAKE_ticket_1" columns="CashboxID" ref-table="cashbox" ref-schema="" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="1"/>
+      <foreign-key name="#FAKE_ticket_2" columns="WagonID" ref-table="wagon" ref-schema="" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="1"/>
+    </table>
+    <table name="train" schema="" catalog="" type="TABLE">
+      <column name="ID" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
+      <column name="Direction" sqlType="VARCHAR(255)" precision="0" scale="-1" nullable="true" jdbcType="12" def="J05VTEwn"/>
+      <column name="WagonNumber" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="SeatNumber" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="DispatchDate" sqlType="DATETIME" precision="0" scale="-1" nullable="true" jdbcType="12" def="J05VTEwn"/>
+      <column name="arrivalDate" sqlType="DATETIME" precision="0" scale="-1" nullable="true" jdbcType="12" def="J05VTEwn"/>
+      <column name="EmployeeID" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4" def="MA=="/>
+      <primary-key columns="id"/>
+      <index name="EmployeeIDKey" unique="true" columns="EmployeeID"/>
+      <index name="~~temp~index~name0" unique="true" columns="ID"/>
+    </table>
+    <table name="wagon" schema="" catalog="" type="TABLE">
+      <column name="ID" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
+      <column name="WagonType" sqlType="VARCHAR(255)" precision="0" scale="-1" nullable="true" jdbcType="12" def="J05VTEwn"/>
+      <column name="Cost" sqlType="FLOAT(0,0)" precision="0" scale="-1" nullable="true" jdbcType="6" def="MA=="/>
+      <column name="TicketID" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="TrainID" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4" def="MA=="/>
+      <primary-key columns="id"/>
+      <foreign-key name="#FAKE_wagon_1" columns="TrainID" ref-table="train" ref-schema="" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="1"/>
+      <index name="TrainID" unique="true" columns="TrainID"/>
+    </table>
+  </data-source>
+</component>

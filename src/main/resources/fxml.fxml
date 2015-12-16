@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" fx:id="mainAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <ListView fx:id="listView" layoutX="0.0" layoutY="0.0" prefHeight="400.0" prefWidth="143.0" />
+    <TableView fx:id="tableView" layoutX="143.0" layoutY="0.0" prefHeight="400.0" prefWidth="409.0">
+      <columns>
+        <TableColumn prefWidth="75.0" text="Column X" />
+        <TableColumn prefWidth="75.0" text="Column X" />
+      </columns>
+    </TableView>
+    <Button fx:id="editButton" layoutX="584.0" layoutY="179.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="85.0" text="Edit" />
+    <Button fx:id="deleteButton" layoutX="584.0" layoutY="243.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="85.0" text="Delete" />
+    <Button fx:id="addButton" layoutX="584.0" layoutY="113.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="85.0" text="Add" />
+    <Button fx:id="commitButton" layoutX="552.0" layoutY="0.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="148.0" text="Commit" />
+  </children>
+</AnchorPane>
